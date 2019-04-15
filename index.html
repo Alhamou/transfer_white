@@ -1,0 +1,44 @@
+<style>
+    body {
+    background: #2b2b2b;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: Helvetica neue, roboto;
+    }
+
+    h1 {
+    color: #bdbdbd;
+    font-weight: 300;
+    }
+
+    #bg{
+    height: 100vh;
+    width: 100vw;
+    background: #FFF
+    }
+</style>
+<a href="file:///home/emad/Documents/test%20Site/index.html">test</a>
+
+<div id="bg"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  
+  $('#bg').fadeOut();
+  
+  $("a").click(function(e){
+
+    e.preventDefault();
+  
+    $('#bg').fadeIn(function(){
+      location.assign(e.target.href);
+    });
+
+  });
+    
+});
+</script>
